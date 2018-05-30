@@ -4,37 +4,439 @@
 	<meta charset="UTF-8">
 	<title>Мир Ванны</title>
 
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 	<header>
-		<div class="headWrapper wrapper">
-			<div class="topPanel"></div>
-			<div class="mainPanel"></div>
-			<div class="breadcrumbs"></div>
+		<div class="topBar"></div>
+		<div class="mainBar">
+			<div class="wrap">
+				<div class="logoWrap">
+					<a href="#"><img src="img/logo.png" class="img-responsive" alt=""></a>
+					<a href="tel:+73745695854" class="phone">+7 (374) 569 58 54</a>
+				</div>
+			</div>
+		</div>
+		<div class="breadcrumbs">
+			<div class="wrap">
+				<div class="bcWrap">
+					<div class="item"><a href="#">Главная</a></div>
+					<div class="item"><a href="#">Каталог</a></div>
+					<div class="item"><a href="#">Душевое оборудование</a></div>
+				</div>
+			</div>
 		</div>
 	</header>
-	<div class="toolbar">
-		<div class="toolbarWrapper wrapper">
-			<div class="topToolbar">
-				<section>
-					<h1></h1>
-				</section>
-				<div class="filterButton"></div>
+	<div class="pageTitle">
+		<div class="wrap">
+			<div class="ptWrap">
+				<div class="item"><h1>ДУШЕВОЕ ОБОРУДОВАНИЕ</h1></div>
+				<div class="item"><span id="filterShow">Скрыть фильтр <i class="fa fa-sort-asc" aria-hidden="true"></i></span></div>
 			</div>
-			<div class="filter"></div>
+		</div>
+	</div>
+	<div class="filter">
+		<div class="wrap">
+			<div class="filterWrap">
+				<form class="filters">
+					<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+						<symbol id="checkmark" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1"></path>
+						</symbol>
+					</svg>
+					<div class="row inputs">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+							<div class="filterItem">
+								<h4>Тип оборудования</h4>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="showerSystem" class="promoted-input-checkbox" name="typeOfEquipment" value="Душевые системы">
+										<label for="showerSystem">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Душевые системы</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="injectors" class="promoted-input-checkbox" name="typeOfEquipment" value="Боковые души">
+										<label for="injectors">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Боковые души (форсунки)</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="upperShowers" class="promoted-input-checkbox" name="typeOfEquipment" value="Верхние души">
+										<label for="upperShowers">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Верхние души</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="showerHoses" class="promoted-input-checkbox" name="typeOfEquipment" value="Шланги для душа">
+										<label for="showerHoses">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+											<span>Шланги для душа</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="showerHeadsets" class="promoted-input-checkbox" name="typeOfEquipment" value="Душевые гарнитуры">
+										<label for="showerHeadsets">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+											<span>Душевые гарнитуры</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="showerBailer" class="promoted-input-checkbox" name="typeOfEquipment" value="Душевые лейки">
+										<label for="showerBailer">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+											<span>Душевые лейки</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="hydromassagePanels" class="promoted-input-checkbox" name="typeOfEquipment" value="Гидромассажные панели">
+										<label for="hydromassagePanels">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+											<span>Гидромассажные панели</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="hygienicShowers" class="promoted-input-checkbox" name="typeOfEquipment" value="Гигиенические души">
+										<label for="hygienicShowers">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+											<span>Гигиенические души</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+							<div class="filterItem">
+								<h4>Назначение</h4>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="forSmallAppartment" class="promoted-input-checkbox" name="appointment" value="Для маленькой квартиры">
+										<label for="forSmallAppartment">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Для маленькой квартиры</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="forCottage" class="promoted-input-checkbox" name="appointment" value="Для дачи">
+										<label for="forCottage">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Для дачи</span>
+									</div>
+								</div>
+							</div>
+							<div class="filterItem">
+								<h4>Управление</h4>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="thermostatic" class="promoted-input-checkbox" name="control" value="Термостатические">
+										<label for="thermostatic">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Термостатические</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="electronic" class="promoted-input-checkbox" name="control" value="Электронные">
+										<label for="electronic">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Электронные</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="builtin" class="promoted-input-checkbox" name="control" value="Встраиваемые">
+										<label for="builtin">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Встраиваемые</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+							<div class="filterItem">
+								<h4>Способ монтажа</h4>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="suspended" class="promoted-input-checkbox" name="installation" value="Навесные">
+										<label for="suspended">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Навесные</span>
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-checkbox">
+										<input type="checkbox" id="floor" class="promoted-input-checkbox" name="installation" value="Напольные">
+										<label for="floor">
+											<svg><use xlink:href="#checkmark"></svg>
+										</label>
+										<span>Напольные</span>
+									</div>
+								</div>
+							</div>
+							<div class="filterItem">
+								<h4>Цена, руб.</h4>
+								<div class="item">
+									<div class="promoted-text">
+										<span>от</span>
+										<input type="text" id="from" name="from">
+									</div>
+								</div>
+								<div class="item">
+									<div class="promoted-text">
+										<span>до</span>
+										<input type="text" id="to" name="to">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+							<div class="filterItem">
+								<h4>Производитель</h4>
+								<div class="scrollWindow">
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandIddis" class="promoted-input-checkbox" name="manufacturer" value="IDDIS">
+											<label for="brandIddis">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>IDDIS</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandRavak" class="promoted-input-checkbox" name="manufacturer" value="Ravak">
+											<label for="brandRavak">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>Ravak</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandPoolSpa" class="promoted-input-checkbox" name="manufacturer" value="PoolSpa">
+											<label for="brandPoolSpa">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>PoolSpa</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandKolo" class="promoted-input-checkbox" name="manufacturer" value="KOLO">
+											<label for="brandKolo">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>KOLO</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandJacobDelafon" class="promoted-input-checkbox" name="manufacturer" value="JACOB DELAFON">
+											<label for="brandJacobDelafon">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>JACOB DELAFON</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandVidima" class="promoted-input-checkbox" name="manufacturer" value="VIDIMA">
+											<label for="brandVidima">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>VIDIMA</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandRoca" class="promoted-input-checkbox" name="manufacturer" value="Roca">
+											<label for="brandRoca">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>Roca</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandVidima2" class="promoted-input-checkbox" name="manufacturer" value="VIDIMA">
+											<label for="brandVidima2">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>VIDIMA</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandVidima3" class="promoted-input-checkbox" name="manufacturer" value="VIDIMA">
+											<label for="brandVidima3">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>VIDIMA</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandVidima4" class="promoted-input-checkbox" name="manufacturer" value="VIDIMA">
+											<label for="brandVidima4">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>VIDIMA</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandVidima5" class="promoted-input-checkbox" name="manufacturer" value="VIDIMA">
+											<label for="brandVidima5">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>VIDIMA</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandVidima6" class="promoted-input-checkbox" name="manufacturer" value="VIDIMA">
+											<label for="brandVidima6">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>VIDIMA</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="promoted-checkbox">
+											<input type="checkbox" id="brandVidima7" class="promoted-input-checkbox" name="manufacturer" value="VIDIMA">
+											<label for="brandVidima7">
+												<svg><use xlink:href="#checkmark"></svg>
+											</label>
+											<span>VIDIMA</span>
+										</div>
+									</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+					<div class="row buttons">
+						<button id="clearFilters" class="promoted-button button-primary">Очистить фильтр</button>
+						<button id="applyFilters" class="promoted-button button-success">Применить фильтр</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 	<div class="page">
-		<div class="pageWrapper wrapper">
-			<div class="goodsWrapper"></div>
-			<div class="paginator"></div>
+		<div class="wrap">
+			<div class="pageWrap">
+				<div class="goods">
+					<div class="item good" data-art="1">
+						<div class="img-case">
+							<img src="img/goods/1.png" alt="" class="img-responsive">
+						</div>
+						<h3>Шланг для душа Hansgrohe Metaflex<br>(1,25 M)</h3>
+						<span class="price">1 200 руб.</span>
+						<button class="promoted-button button-orange button-straight">В корзину</button>
+					</div>
+					<div class="item good" data-art="2">
+						<div class="img-case">
+							<img src="img/goods/2.png" alt="" class="img-responsive">
+						</div>
+						<h3>Шланг для душа ISIFLEX B (1,25 M)</h3>
+						<span class="price">1 580 руб.</span>
+						<button class="promoted-button button-orange button-straight">В корзину</button>
+					</div>
+					<div class="item good" data-art="3">
+						<div class="img-case">
+							<img src="img/goods/3.png" alt="" class="img-responsive">
+						</div>
+						<h3>Шланг для душа AM PM (1,25 M)</h3>
+						<span class="price">12 400 руб.</span>
+						<button class="promoted-button button-orange button-straight">В корзину</button>
+					</div>
+					<div class="item good" data-art="4">
+						<div class="img-case">
+							<img src="img/goods/4.png" alt="" class="img-responsive">
+						</div>
+						<h3>Шланг для душа МОЛОТ (1,25 M)</h3>
+						<span class="price">120 руб.</span>
+						<button class="promoted-button button-orange button-straight">В корзину</button>
+					</div>
+					<div class="item good" data-art="5">
+						<div class="img-case">
+							<img src="img/goods/1.png" alt="" class="img-responsive">
+						</div>
+						<h3>Шланг для душа Hansgrohe Metaflex<br>(1,25 M)</h3>
+						<span class="price">1 200 руб.</span>
+						<button class="promoted-button button-orange button-straight">В корзину</button>
+					</div>
+					<div class="item good" data-art="6">
+						<div class="img-case">
+							<img src="img/goods/2.png" alt="" class="img-responsive">
+						</div>
+						<h3>Шланг для душа ISIFLEX B (1,25 M)</h3>
+						<span class="price">1 580 руб.</span>
+						<button class="promoted-button button-orange button-straight">В корзину</button>
+					</div>
+					<div class="item good" data-art="7">
+						<div class="img-case">
+							<img src="img/goods/3.png" alt="" class="img-responsive">
+						</div>
+						<h3>Шланг для душа AM PM (1,25 M)</h3>
+						<span class="price">12 400 руб.</span>
+						<button class="promoted-button button-orange button-straight">В корзину</button>
+					</div>
+					<div class="item good" data-art="8">
+						<div class="img-case">
+							<img src="img/goods/4.png" alt="" class="img-responsive">
+						</div>
+						<h3>Шланг для душа МОЛОТ (1,25 M)</h3>
+						<span class="price">120 руб.</span>
+						<button class="promoted-button button-orange button-straight">В корзину</button>
+					</div>
+				</div>
+				<div class="paginator">
+					<div class="item curentPage">
+						<a href="#">1</a>
+					</div>
+					<div class="item">
+						<a href="#">2</a>
+					</div>
+					<div class="item">
+						<a href="#">3</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<footer>
-		<div class="footerWrapper wrapper">
-			
-		</div>
+		<div class="deviderSpace"></div>
 	</footer>
 </body>
 </html>

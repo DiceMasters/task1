@@ -1,0 +1,70 @@
+.promoted-input-checkbox {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.promoted-checkbox {
+	display: flex;
+	align-items: flex-start;
+}
+
+.promoted-checkbox span {
+    display: inline-block;
+    margin-top: -3px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+}
+
+.promoted-checkbox input:checked + label > svg {
+	height: 24px;
+	animation: draw-checkbox ease-in-out 0.2s forwards;
+}
+
+.promoted-checkbox label:active::after {
+	background-color: #e6e6e6;
+}
+
+.promoted-checkbox label {
+	color: #bdbdbd;
+	cursor: pointer;
+	position: relative;
+	padding-top: -5px;
+}
+
+.promoted-checkbox label:after {
+	content: "";
+	height: 15px;
+	width: 15px;
+	margin-right: 1rem;
+	float: left;
+	border: 1px solid #bdbdbd;
+	border-radius: 3px;
+	transition: 0.15s all ease-out;
+}
+
+.promoted-checkbox svg {
+	stroke: #ff6900;
+	stroke-width: 3px;
+	height: 0;
+	width: 15px;
+	position: absolute;
+	left: 1px;
+	top: -5px;
+	stroke-dasharray: 33;
+}
+
+@keyframes draw-checkbox {
+	0% {
+		stroke-dashoffset: 33;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
