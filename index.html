@@ -6,6 +6,7 @@
 
 	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="src/main.js"></script>
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/reset.css">
@@ -14,12 +15,39 @@
 </head>
 <body>
 	<header>
-		<div class="topBar"></div>
+		<div class="topBar">
+			<div class="wrap">
+				<div class="systemMenu">
+					<div class="item">
+						<a href="#"><i class="fa fa-envelope" aria-hidden="true" alt="Личные сообщения"></i></a>
+					</div>
+					<div class="item">
+						<a href="#"><i class="fa fa-shopping-cart" aria-hidden="true" alt="Корзина"></i></a>
+					</div>
+					<div class="item">
+						<a href="#"><i class="fa fa-user" aria-hidden="true" alt="Профиль"></i></a>
+					</div>
+					<div class="item">
+						<form method="GET" class="searchInput">
+							<i class="fa fa-search" aria-hidden="true"></i>
+							<input type="text" id="search" name="search" placeholder="Поиск">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="mainBar">
 			<div class="wrap">
-				<div class="logoWrap">
+				<div class="logoWrap col-lg-4 col-md-4">
 					<a href="#"><img src="img/logo.png" class="img-responsive" alt=""></a>
 					<a href="tel:+73745695854" class="phone">+7 (374) 569 58 54</a>
+				</div>
+				<div class="navigation col-lg-8 col-md-4">
+					<a href="#" class="curent">Каталог</a>
+					<a href="#">Акции</a>
+					<a href="#">Оплата</a>
+					<a href="#">Доставка</a>
+					<a href="#">Контакты</a>
 				</div>
 			</div>
 		</div>
@@ -37,11 +65,11 @@
 		<div class="wrap">
 			<div class="ptWrap">
 				<div class="item"><h1>ДУШЕВОЕ ОБОРУДОВАНИЕ</h1></div>
-				<div class="item"><span id="filterShow">Скрыть фильтр <i class="fa fa-sort-asc" aria-hidden="true"></i></span></div>
+				<div class="item"><span id="filterShow">Скрыть фильтр <i class="fa fa-caret-up" aria-hidden="true"></i></i></span></div>
 			</div>
 		</div>
 	</div>
-	<div class="filter">
+	<div class="filter" id="filters">
 		<div class="wrap">
 			<div class="filterWrap">
 				<form class="filters">
@@ -436,7 +464,87 @@
 		</div>
 	</div>
 	<footer>
-		<div class="deviderSpace"></div>
+		<!--<div class="deviderSpace"></div>-->
+		<div class="wrap">
+			<div class="footerWrap">
+				<div class="widgetOne col-lg-4 col-md-4">
+					<div class="logoWrap">
+						<a href="#"><img src="img/logoFooter.png" class="img-responsive" alt=""></a>
+					</div>
+					<form action="#" method="POST" class="formFeedback">
+						<p>Свяжитесь с нами!</p>
+						<input type="text" id="name" name="name" placeholder="ФИО">
+						<input type="text" id="phone" name="phone" placeholder="Телефон">
+						<div class="promoted-checkbox">
+							<input type="checkbox" id="agree" name="agree" class="promoted-input-checkbox" value="Принимаю">
+							<label for="agree">
+								<svg><use xlink:href="#checkmark"></svg>
+							</label>
+							<span>Я согласен с правилами передачи и обработки персональных данных</span>
+						</div>
+						<button class="promoted-button button-success button-straight">Отправить</button>
+					</form>
+				</div>
+				<div class="widgetMerger col-lg-8 col-md-8">
+					<div class="widgetTwo">
+						<div class="menuWrap">
+							<div class="col-lg-3 col-md-3">
+								<div class="subMenuWrap">
+									<div class="item">
+										<a href="#">Главная</a>
+									</div>
+									<div class="item">
+										<a href="#">Акции</a>
+									</div>
+									<div class="item">
+										<a href="#">Оплата</a>
+									</div>
+									<div class="item">
+										<a href="#">Доставка</a>
+									</div>
+									<div class="item">
+										<a href="#">Контакты</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-9 col-md-9">
+								<div class="catalogMenu">
+									<p>Каталог</p>
+									<div class="item"><a href="#">Ванны и бассейны</a></div>
+									<div class="item"><a href="#">Мебель для ванной комнаты</a></div>
+									<div class="item"><a href="#">Душевые кабины и боксы</a></div>
+									<div class="item"><a href="#">Душевые ограждения</a></div>
+									<div class="item"><a href="#">Санфаянс</a></div>
+									<div class="item"><a href="#">Смесители</a></div>
+									<div class="item"><a href="#">Душевое оборудование</a></div>
+									<div class="item"><a href="#">Полотенцесушители</a></div>
+									<div class="item"><a href="#">Инсталяции</a></div>
+									<div class="item"><a href="#">Сливное оборудование</a></div>
+									<div class="item"><a href="#">Аксесуары для ванной</a></div>
+									<div class="item"><a href="#">Оборудование для людей с ограниченными возможностями</a></div>
+									<div class="item"><a href="#">Комплектцющие и запчасти</a></div>
+									<div class="item"><a href="#">Водоотведение</a></div>
+									<div class="item"><a href="#">Моющие средства</a></div>
+									<div class="item"><a href="#">Оборудование для общественных заведений</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="widgetThree">
+						<div class="contactWrap">
+							<div class="item">
+								<a href="tel:83745695854">+7 (374) 569 58 54</a>
+								<p>Г.Уфа, ул Ванная 64, корпус 3, офис 112</p>
+								<a href="#" class="confident">Политика конфиденциальности</a>
+							</div>
+							<div class="item">
+								<a href="#"><img src="img/artmax-logo.png" class="img-responsive" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
 </body>
 </html>
