@@ -384,7 +384,7 @@
 		<div class="wrap">
 			<div class="pageWrap">
 				<div class="goods">
-					<div class="item good" data-art="1">
+					<div class="item good" articul="1">
 						<div class="img-case">
 							<img src="img/goods/1.png" alt="" class="img-responsive">
 						</div>
@@ -392,31 +392,31 @@
 						<span class="price">1 200 руб.</span>
 						<button class="promoted-button button-orange button-straight">В корзину</button>
 					</div>
-					<div class="item good" data-art="2">
+					<div class="item good" articul="2">
 						<div class="img-case">
 							<img src="img/goods/2.png" alt="" class="img-responsive">
 						</div>
-						<h3>Шланг для душа ISIFLEX B (1,25 M)</h3>
+						<h3>Шланг для душа ISIFLEX B<br>(1,25 M)</h3>
 						<span class="price">1 580 руб.</span>
 						<button class="promoted-button button-orange button-straight">В корзину</button>
 					</div>
-					<div class="item good" data-art="3">
+					<div class="item good" articul="3">
 						<div class="img-case">
 							<img src="img/goods/3.png" alt="" class="img-responsive">
 						</div>
-						<h3>Шланг для душа AM PM (1,25 M)</h3>
+						<h3>Шланг для душа AM PM<br>(1,25 M)</h3>
 						<span class="price">12 400 руб.</span>
 						<button class="promoted-button button-orange button-straight">В корзину</button>
 					</div>
-					<div class="item good" data-art="4">
+					<div class="item good" articul="4">
 						<div class="img-case">
 							<img src="img/goods/4.png" alt="" class="img-responsive">
 						</div>
-						<h3>Шланг для душа МОЛОТ (1,25 M)</h3>
+						<h3>Шланг для душа МОЛОТ<br>(1,25 M)</h3>
 						<span class="price">120 руб.</span>
 						<button class="promoted-button button-orange button-straight">В корзину</button>
 					</div>
-					<div class="item good" data-art="5">
+					<div class="item good" articul="5">
 						<div class="img-case">
 							<img src="img/goods/1.png" alt="" class="img-responsive">
 						</div>
@@ -424,27 +424,27 @@
 						<span class="price">1 200 руб.</span>
 						<button class="promoted-button button-orange button-straight">В корзину</button>
 					</div>
-					<div class="item good" data-art="6">
+					<div class="item good" articul="6">
 						<div class="img-case">
 							<img src="img/goods/2.png" alt="" class="img-responsive">
 						</div>
-						<h3>Шланг для душа ISIFLEX B (1,25 M)</h3>
+						<h3>Шланг для душа ISIFLEX B<br>(1,25 M)</h3>
 						<span class="price">1 580 руб.</span>
 						<button class="promoted-button button-orange button-straight">В корзину</button>
 					</div>
-					<div class="item good" data-art="7">
+					<div class="item good" articul="7">
 						<div class="img-case">
 							<img src="img/goods/3.png" alt="" class="img-responsive">
 						</div>
-						<h3>Шланг для душа AM PM (1,25 M)</h3>
+						<h3>Шланг для душа AM PM<br>(1,25 M)</h3>
 						<span class="price">12 400 руб.</span>
 						<button class="promoted-button button-orange button-straight">В корзину</button>
 					</div>
-					<div class="item good" data-art="8">
+					<div class="item good" articul="8">
 						<div class="img-case">
 							<img src="img/goods/4.png" alt="" class="img-responsive">
 						</div>
-						<h3>Шланг для душа МОЛОТ (1,25 M)</h3>
+						<h3>Шланг для душа МОЛОТ<br>(1,25 M)</h3>
 						<span class="price">120 руб.</span>
 						<button class="promoted-button button-orange button-straight">В корзину</button>
 					</div>
@@ -464,17 +464,22 @@
 		</div>
 	</div>
 	<footer>
-		<!--<div class="deviderSpace"></div>-->
 		<div class="wrap">
 			<div class="footerWrap">
-				<div class="widgetOne col-lg-4 col-md-4">
+				<div class="widgetOne customColumn1">
 					<div class="logoWrap">
-						<a href="#"><img src="img/logoFooter.png" class="img-responsive" alt=""></a>
+						<a href="#"><img src="img/logoFooter.png" alt=""></a>
 					</div>
 					<form action="#" method="POST" class="formFeedback">
 						<p>Свяжитесь с нами!</p>
-						<input type="text" id="name" name="name" placeholder="ФИО">
-						<input type="text" id="phone" name="phone" placeholder="Телефон">
+						<div class="floatLabel">
+							<label for="name">ФИО</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						<div class="floatLabel">
+							<label for="phone">Телефон</label>
+							<input type="text" id="phone" name="phone" required>
+						</div>
 						<div class="promoted-checkbox">
 							<input type="checkbox" id="agree" name="agree" class="promoted-input-checkbox" value="Принимаю">
 							<label for="agree">
@@ -485,10 +490,10 @@
 						<button class="promoted-button button-success button-straight">Отправить</button>
 					</form>
 				</div>
-				<div class="widgetMerger col-lg-8 col-md-8">
+				<div class="widgetMerger customColumn2">
 					<div class="widgetTwo">
 						<div class="menuWrap">
-							<div class="col-lg-3 col-md-3">
+							<div class="col-lg-3 col-md-3 no-left-padding">
 								<div class="subMenuWrap">
 									<div class="item">
 										<a href="#">Главная</a>
@@ -507,25 +512,33 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-9 col-md-9">
+							<div class="col-lg-9 col-md-9 no-right-padding">
 								<div class="catalogMenu">
 									<p>Каталог</p>
-									<div class="item"><a href="#">Ванны и бассейны</a></div>
-									<div class="item"><a href="#">Мебель для ванной комнаты</a></div>
-									<div class="item"><a href="#">Душевые кабины и боксы</a></div>
-									<div class="item"><a href="#">Душевые ограждения</a></div>
-									<div class="item"><a href="#">Санфаянс</a></div>
-									<div class="item"><a href="#">Смесители</a></div>
-									<div class="item"><a href="#">Душевое оборудование</a></div>
-									<div class="item"><a href="#">Полотенцесушители</a></div>
-									<div class="item"><a href="#">Инсталяции</a></div>
-									<div class="item"><a href="#">Сливное оборудование</a></div>
-									<div class="item"><a href="#">Аксесуары для ванной</a></div>
-									<div class="item"><a href="#">Оборудование для людей с ограниченными возможностями</a></div>
-									<div class="item"><a href="#">Комплектцющие и запчасти</a></div>
-									<div class="item"><a href="#">Водоотведение</a></div>
-									<div class="item"><a href="#">Моющие средства</a></div>
-									<div class="item"><a href="#">Оборудование для общественных заведений</a></div>
+									<div class="items">
+										<div class="customColMini">
+											<div class="item"><a href="#">Ванны и бассейны</a></div>
+											<div class="item"><a href="#">Мебель для ванной комнаты</a></div>
+											<div class="item"><a href="#">Душевые кабины и боксы</a></div>
+											<div class="item"><a href="#">Душевые ограждения</a></div>
+											<div class="item"><a href="#">Санфаянс</a></div>
+											<div class="item"><a href="#">Смесители</a></div>
+										</div>
+										<div class="customColMini">
+											<div class="item"><a href="#">Душевое оборудование</a></div>
+											<div class="item"><a href="#">Полотенцесушители</a></div>
+											<div class="item"><a href="#">Инсталяции</a></div>
+											<div class="item"><a href="#">Сливное оборудование</a></div>
+											<div class="item"><a href="#">Аксесуары для ванной</a></div>
+											<div class="item"><a href="#">Оборудование для людей с ограниченными возможностями</a></div>
+										</div>
+										<div class="customColMini">
+											<div class="item"><a href="#">Комплектцющие и запчасти</a></div>
+											<div class="item"><a href="#">Водоотведение</a></div>
+											<div class="item"><a href="#">Моющие средства</a></div>
+											<div class="item"><a href="#">Оборудование для общественных заведений</a></div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -533,12 +546,12 @@
 					<div class="widgetThree">
 						<div class="contactWrap">
 							<div class="item">
-								<a href="tel:83745695854">+7 (374) 569 58 54</a>
+								<a href="tel:83745695854" class="phone">+7 (374) 569 58 54</a>
 								<p>Г.Уфа, ул Ванная 64, корпус 3, офис 112</p>
 								<a href="#" class="confident">Политика конфиденциальности</a>
 							</div>
 							<div class="item">
-								<a href="#"><img src="img/artmax-logo.png" class="img-responsive" alt=""></a>
+								<a href="http://www.artmax-studio.ru/" target="_blank"><img src="img/artmax-logo.png" class="brandLogo" alt=""></a>
 							</div>
 						</div>
 					</div>
@@ -546,5 +559,18 @@
 			</div>
 		</div>
 	</footer>
+	<div class="lightboxHeaven" id="heaven">
+		<!--<div class="addToCart">
+			<div class="topCart">
+				<p>1 Товар добавлен в корзину!</p>
+				<button><i class="fa fa-times" aria-hidden="true"></i></button>
+			</div>
+			<p>Шланг для душа Hansgrohe Metaflex<br>(1,25 м)</p>
+			<div class="downCart">
+				<p>2 400 руб.</p>
+				<a href="#">Перейти в корзину</a>
+			</div>
+		</div>-->
+	</div>
 </body>
 </html>

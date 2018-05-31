@@ -6,10 +6,22 @@ h1, h2, h3, h4, h5{
 	margin-bottom: 0px !important;
 }
 
+body{
+	overflow-x: hidden;
+}
+
 a:hover,
 a:focus,
 a:active{
 	text-decoration: none;
+}
+
+.no-right-padding{
+	padding-right: 0px;
+}
+
+.no-left-padding{
+	padding-left: 0px;
 }
 
 .wrap{
@@ -512,14 +524,24 @@ footer{
 	background-repeat: repeat-x, repeat;
 	-webkit-background-size: 80px, 100%;
 	background-size: 80px, 100%;
-	padding-bottom: 70px;
-	ут размер и позиции бэкграундов
 }
 
-.deviderSpace{
-	width: 100%;
-	height: 80px;
-	background-color: #ededed;
+footer .logoWrap img{
+	max-width: 150px;
+}
+
+.footerWrap{
+	padding-bottom: 75px;
+}
+
+.customColumn1{
+	width: 28.5%;
+	padding-right: 21px;
+}
+
+.customColumn2{
+	width: 71.6%;
+	padding-left: 21px;
 }
 
 .footerWrap{
@@ -529,7 +551,7 @@ footer{
 }
 
 .widgetOne{
-	padding-left: 0px !important;
+	margin-top: 90px;
 }
 
 .widgetOne form{
@@ -541,13 +563,22 @@ footer{
 .widgetOne form p{
 	font-family: 'Gotham Pro', Arial, sans-serif;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 22px;
+	letter-spacing: -0.01em;
 	text-transform: uppercase;
 	color: white;
 	padding: 60px 0 50px 0;
 }
 
+.widgetOne form label{
+	font-family: 'Gotham Pro', Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: white;
+}
+
 .widgetOne form input[type="text"]{
+	width: 100%;
 	background: transparent;
 	border: 0;
 	border-bottom: 1px white solid;
@@ -556,6 +587,20 @@ footer{
 	font-family: 'Gotham Pro', Arial, sans-serif;
 	font-size: 14px;
 	font-weight: 400;
+}
+
+.floatLabel{
+	position: relative;
+}
+
+.floatLabel label{
+	position: absolute;
+	top: 7px;
+	left: 0%;
+}
+
+.floatLabel input:focus ~ .floatLabel label{
+	top: 0px;
 }
 
 .widgetOne form input[type="text"]::-webkit-input-placeholder{
@@ -587,7 +632,7 @@ footer{
 }
 
 .widgetMerger{
-	top: -40px;
+	margin-top: 38px;
 	display: flex;
 	flex-direction: column;
 	padding-right: 0px !important;
@@ -595,11 +640,16 @@ footer{
 
 .widgetTwo{
 	background-color: white;
-	padding: 50px 40px;
+	padding: 45px 0px 45px 30px;
+	width: 10000%;
+}
+
+.menuWrap{
+	max-width: 738px;
 }
 
 .subMenuWrap > .item{
-	margin-bottom: 20px;
+	margin-bottom: 17px;
 }
 
 .subMenuWrap > .item:last-child{
@@ -611,4 +661,151 @@ footer{
 	font-weight: bold;
 	font-size: 15px;
 	color: black;
+}
+
+.subMenuWrap > .item > a:hover{
+	color: #ff6900;
+}
+
+.customColMini{
+	width: 33.3%;
+	padding: 0 5px;
+}
+
+.catalogMenu .items{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.catalogMenu p{
+	font-family: 'Gotham Pro', Arial, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	padding-bottom: 6px;
+}
+
+.catalogMenu .item{
+	padding-bottom: 20px;
+}
+
+.catalogMenu .item a{
+	font-family: 'Gotham Pro', Arial, sans-serif;
+	font-size: 13px;
+	word-wrap: break-word;
+	text-decoration: underline;
+	margin-bottom: 25px;
+}
+
+.widgetThree{
+	padding: 30px 0 0 45px;
+}
+
+.contactWrap{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.contactWrap > .item > .phone,
+.contactWrap > .item > .phone:hover{
+	font-family: 'Gotham Pro', Arial, sans-serif;
+	font-size: 30px;
+	color: white;
+	text-decoration: none;
+	letter-spacing: -0.05em;
+}
+
+.contactWrap > .item > p,
+.contactWrap > .item > .confident,
+.contactWrap > .item > p:hover,
+.contactWrap > .item > .confident:hover{
+	font-family: 'Gotham Pro', Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	padding-top: 5px;
+	color: white;
+}
+
+.contactWrap > .item > .confident{
+	display: block;
+	margin-top: 10px;
+	text-decoration: underline;
+}
+
+footer .brandLogo{
+	width: 80px;
+}
+
+/* Модальное окно */
+
+.lightboxHeaven{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	bottom: 0%;
+	right: 0%;
+	width: auto;
+	height: auto;
+}
+
+.addToCart{
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 350px;
+	max-width: 100%;
+	background-color: white;
+	border-radius: 3px;
+	margin: 10px;
+	padding: 17px;
+	font-family: 'Gotham Pro', Arial, sans-serif;
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+	box-shadow:         0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+	
+}
+
+.topCart,
+.downCart{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.topCart p{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.topCart button{
+	display: flex;
+	align-content: center;
+	width: 23px;
+	height: 23px;
+	background-color: #ff6b05;
+	border-radius: 3px;
+	border: 0;
+	color: white;
+}
+
+.topCart button i{
+	line-height: 55%;
+}
+
+.addToCart > p{
+	font-size: 14px;
+	color: black;
+}
+
+.downCart p{
+	margin-bottom: 0px;
+	font-weight: bold;
+	color: #ff6b05;
+}
+
+.downCart a{
+	font-weight: bold;
+	color: #00617e;
 }
