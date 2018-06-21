@@ -16,6 +16,13 @@ a:active{
 	text-decoration: none;
 }
 
+input:active, input:focus {
+  outline: none;
+}
+input::-moz-focus-inner {
+  border: 0;
+}
+
 .no-right-padding{
 	padding-right: 0px;
 }
